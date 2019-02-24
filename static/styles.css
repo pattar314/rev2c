@@ -1,0 +1,18 @@
+#in-form {
+    display: flex;
+    justify-content: center;
+}
+
+#circ-form {
+    border: solid black 1px;
+}
+
+#results {
+    display: flex;
+    border: solid black 1px;
+    height: 30%;
+    width: 70%;
+    justify-content: center;
+    position: center;
+    /*display: none;*/
+}
