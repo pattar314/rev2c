@@ -3,14 +3,24 @@
 for an object on its surface to reach light speed.
 2. Secondary goal is to add the ability to call this from an api and return a varity of different answers depending on input.
 */
+function calculate_rpm(){
+    size = document.forms.circ_in.circ_input.value;
+    c = 299792458;
+    rpm_needed = (c / size) * 60;
+    alert(rpm_needed);
+}
 
-let in_form = document.getElementById("#circ-form");
+/* let in_form = document.forms.circ-form;
 in_form.addEventListener("submit", event => {
-    alert("It works");
-    let size = in_form.elements.circ_in.value;
     event.preventDefault();
-    let c = 299792458;
-    let rpm_needed = (c / size);
-    let solution = document.getElementById("#results");
-    solution.elements = "It worked";
+    alert("It works");
+     */
+let form = document.forms.circ_in;
+form.addEventListener("submit", event => {
+  console.log("Saving value", form.elements.value.value);
+  event.preventDefault();
 });
+
+function test(){
+    alert("It works");
+}
