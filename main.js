@@ -4,22 +4,28 @@ for an object on its surface to reach light speed.
 2. Secondary goal is to add the ability to call this from an api and return a varity of different answers depending on input.
 */
 function calculate_rpm(){
-    size = document.forms.circ_in.circ_input.value;
-    c = 299792458;
-    rpm_needed = (c / size) * 60;
-    alert(rpm_needed);
+    let size = form.circ_input.value;
+    let c = 299792458;
+    let rpm = (c / size) * 60;
+    return(rpm);
 }
-
-/* let in_form = document.forms.circ-form;
-in_form.addEventListener("submit", event => {
+/* let form = document.querySelector("form");
+  form.addEventListener("submit", event => {
+    console.log("Saving value", form.elements.value.value);
     event.preventDefault();
-    alert("It works");
-     */
-let form = document.forms.circ_in;
-form.addEventListener("submit", event => {
-  console.log("Saving value", form.elements.value.value);
+  }); */
+
+
+
+let form = document.forms.cform;
+form.addEventListener('submit', event => {
+  rpm_needed = calculate_rpm();
+  let to_change = document.getElementById('results');
+  result_html = `In order for an object on the surface of this item to reach light speed it would have to be rotating at ${rpm_needed} rpm.`;
+  to_change.innerHTML = result_html;
   event.preventDefault();
 });
+
 
 function test(){
     alert("It works");
