@@ -19,7 +19,7 @@ function calculate_rpm(){
 
 let form = document.forms.cform;
 form.addEventListener('submit', event => {
-  rpm_needed = calculate_rpm();
+  rpm_needed = calculate_rpm().toFixed(3);
   let to_change = document.getElementById('results');
   result_html = `In order for an object on the surface of this item to reach light speed it would have to be rotating at ${rpm_needed} rpm.`;
   to_change.innerHTML = result_html;
