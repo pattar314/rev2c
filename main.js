@@ -9,13 +9,8 @@ function calculate_rpm(){
     let rpm = (c / size) * 60;
     return(rpm);
 }
-/* let form = document.querySelector("form");
-  form.addEventListener("submit", event => {
-    console.log("Saving value", form.elements.value.value);
-    event.preventDefault();
-  }); */
 
-
+//* When the button is clicked this function takes the value in the textbox and passes it to the function call that does the required math and trims it to three decimal points and then assigns it to the variable rpm_needed so that the value can be output to the page.
 
 let form = document.forms.cform;
 form.addEventListener('submit', event => {
@@ -25,8 +20,3 @@ form.addEventListener('submit', event => {
   to_change.innerHTML = result_html;
   event.preventDefault();
 });
-
-
-function test(){
-    alert("It works");
-}
